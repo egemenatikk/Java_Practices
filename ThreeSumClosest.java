@@ -17,9 +17,9 @@ public class ThreeSumClosest {
      * You may assume that each input would have exactly one solution.
      * 
      * Example: 
-     * Input: nums = [-1,2,1,-4], target = 1
-	 * Output: 2
-	 * Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+     * Input: nums = [0,2,1,3], target = -1
+	 * Output: 3
+	 * Explanation: The sum that is closest to the target is 3. (0 + 1 + 2 = 3).
 	 * 
 	 * 
 	 * */

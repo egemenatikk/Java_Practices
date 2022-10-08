@@ -30,7 +30,7 @@ public class ThreeSumClosest {
         }
         
         Arrays.sort(nums);
-        int closestToTarget = nums[1] + nums[2] + nums[3];
+        int closestToTarget = nums[0] + nums[1] + nums[2];
         
         if (nums.length == 3) {
             return closestToTarget;

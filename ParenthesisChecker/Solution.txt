@@ -1,0 +1,55 @@
+//{ Driver Code Starts
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class Solution
+{
+    //Function to check if brackets are balanced or not.
+    static boolean ispar(String x)
+    {
+        // add your code here
+        Stack<Character> parantheses = new Stack<>();
+        
+        
+        // Iterate through the char array of the string x
+        for (Character character : x.toCharArray()) {
+            
+            // If the current symbol is an opening symbol, psuh it to stack
+            if (character == '(' || character == '{' || character == '[') {
+                parantheses.push(character);
+                
+            
+            } else {
+                
+                // If not, first check if the stack is currently empty or not, if it is empty it means
+                // that it is not balanced
+                if (parantheses.isEmpty()) return false;
+                
+                // If it is not empty and the current paranthesis symbol is ')' check whether the last
+                // paranthesis symbol in stack is '(' or not
+                else if (character == ')') {
+                    Character tempChar = parantheses.pop();
+                    if (tempChar != '(') return false;
+                    
+                // If it is not empty and the current paranthesis symbol is '}' check whether the last
+                // paranthesis symbol in stack is '{' or not
+                } else if (character == '}') {
+                    Character tempChar = parantheses.pop();
+                    if (tempChar != '{') return false;
+                    
+                // If it is not empty and the current paranthesis symbol is ']' check whether the last
+                // paranthesis symbol in stack is '[' or not
+                } else if (character == ']') {
+                    Character tempChar = parantheses.pop();
+                    if (tempChar != '[') return false;
+                }
+            }
+        }
+        
+        // If after iteration of the string x, there are still some paranthesis symbols left in the stack,
+        // it means it is not balanced
+        // If there are no elements left in the stack, it means it is balanced
+        return parantheses.size() == 0;
+    }
+}

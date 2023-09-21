@@ -7,3 +7,6 @@ This repo currently has following programs:
 * StarString
 * WriteNums
 * WriteSequence
+* ThreeSumClosest
+* RomanToInteger
+* CommonPrefix

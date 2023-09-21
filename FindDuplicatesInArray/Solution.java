@@ -1,3 +1,7 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
 class Solution {
     public static ArrayList<Integer> duplicates(int arr[], int n) {
         // code here
